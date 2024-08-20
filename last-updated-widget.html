@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Updated Widget</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            max-width: 300px;
+            margin: auto;
+        }
+        .updated {
+            font-size: 12px; /* 작은 글씨체 */
+            font-style: italic; /* 이탤릭체 */
+            margin-top: 10px;
+            color: #666; /* 회색으로 강조 */
+        }
+    </style>
+</head>
+<body>
+
+    <h3>마지막 수정 시각</h3>
+    <div class="updated" id="last-updated"></div>
+
+    <script>
+        // 현재 날짜와 시간을 가져옵니다.
+        const now = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = now.toLocaleDateString('ko-KR', options);
+
+        // 업데이트된 날짜를 표시합니다.
+        document.getElementById('last-updated').textContent = `[Updated in '${formattedDate}']`;
+    </script>
+
+</body>
+</html>
