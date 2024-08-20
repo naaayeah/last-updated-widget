@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Last Updated Widget</title>
+    <title>Last Update Widget</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,17 +26,16 @@
 </head>
 <body>
 
-    <h3>마지막 수정 시각</h3>
     <div class="updated" id="last-updated"></div>
 
     <script>
         // 현재 날짜와 시간을 가져옵니다.
         const now = new Date();
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
         const formattedDate = now.toLocaleDateString('ko-KR', options);
 
         // 업데이트된 날짜를 표시합니다.
-        document.getElementById('last-updated').textContent = `[Updated in '${formattedDate}']`;
+        document.getElementById('last-updated').textContent = `Updated in ${formattedDate}`;
     </script>
 
 </body>
